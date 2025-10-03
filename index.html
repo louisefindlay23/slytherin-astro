@@ -152,6 +152,41 @@
           <li>⚡ A tradition of producing the finest Quidditch players in Hogwarts.</li>
         </ul>
       </section>
+
+      <section>
+        <h2>Our Trophy Wall</h2>
+        <p>Every Quidditch Cup, every victory — a testament to Slytherin’s supremacy.</p>
+        <div class="trophy-wall">
+          <!-- Repeat the same trophy icon for multiple wins -->
+          <div class="trophy">🏆</div>
+          <div class="trophy">🏆</div>
+          <div class="trophy">🏆</div>
+          <div class="trophy">🏆</div>
+          <div class="trophy">🏆</div>
+        </div>
+      </section>
+      
+      <style>
+      /* Trophy Wall */
+      .trophy-wall {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+      .trophy {
+        font-size: 3rem;
+        transition: transform 0.3s ease, text-shadow 0.3s ease;
+        text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+        cursor: default;
+      }
+      .trophy:hover {
+        transform: scale(1.5) rotateY(15deg);
+        text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88;
+      }
+      </style>
+        
       
   </main>
 
