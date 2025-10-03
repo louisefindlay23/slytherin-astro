@@ -1,109 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Slytherin Supreme</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Georgia", serif; }
-  body { background: #0b1a0b; color: #e0e4e5; line-height: 1.6; overflow-x: hidden; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slytherin Supremacy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Georgia", serif; }
+    body { background: #0b1a0b; color: #e0e4e5; line-height: 1.6; }
 
-  /* ========== SLITHERING TEXT ANIMATION ========== */
-  .slither span {
-    display: inline-block;
-    animation: slither 2s ease-in-out infinite;
-  }
-  .slither span:nth-child(1) { animation-delay: 0s; }
-  .slither span:nth-child(2) { animation-delay: 0.1s; }
-  .slither span:nth-child(3) { animation-delay: 0.2s; }
-  .slither span:nth-child(4) { animation-delay: 0.3s; }
-  .slither span:nth-child(5) { animation-delay: 0.4s; }
-  .slither span:nth-child(6) { animation-delay: 0.5s; }
-  .slither span:nth-child(7) { animation-delay: 0.6s; }
-  .slither span:nth-child(8) { animation-delay: 0.7s; }
-  .slither span:nth-child(9) { animation-delay: 0.8s; }
-  .slither span:nth-child(10) { animation-delay: 0.9s; }
+    /* ========== SLITHERING TEXT ========== */
+    h2.slither { display: inline-block; overflow: visible; }
+    h2.slither span {
+      display: inline-block;
+      white-space: pre; /* preserve spaces */
+      animation: slither 1.8s ease-in-out infinite;
+      will-change: transform, color;
+    }
 
-  @keyframes slither {
-    0%, 100% { transform: translateY(0); color: #00cc66; }
-    50% { transform: translateY(-10px); color: silver; }
-  }
+    @keyframes slither {
+      0%,100% { transform: translateY(0); color: #00cc66; }
+      50%     { transform: translateY(-10px); color: silver; }
+    }
 
-  /* ========== HEADER + HERO ========== */
-  header {
-    background: linear-gradient(135deg, #004d00, #0a0a0a);
-    text-align: center;
-    padding: 2rem;
-    border-bottom: 4px solid #c0c0c0;
-  }
-  header img { width: 120px; margin-bottom: 1rem; }
-  header h1 { color: #00ff88; font-size: 3rem; text-shadow: 2px 2px 6px #000; }
-  header p { color: #c0c0c0; font-size: 1.2rem; }
+    /* ========== HEADER / HERO ========== */
+    header {
+      background: linear-gradient(135deg, #004d00, #0a0a0a);
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 4px solid #c0c0c0;
+    }
+    header img { width: 120px; height: auto; margin-bottom: 1rem; }
+    header h1 { color: #00ff88; font-size: 3rem; text-shadow: 2px 2px 6px #000; }
+    header p { color: #c0c0c0; font-size: 1.2rem; }
 
-  .hero { background: #001a00; height: 40vh; display: flex; align-items: center; justify-content: center; color: #fff; text-shadow: 2px 2px 8px black; }
-  .hero h2 { font-size: 2.5rem; background: rgba(0,0,0,0.6); padding: 1rem 2rem; border-radius: 12px; }
+    .hero {
+      background: #001a00;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px black;
+      padding: 1rem;
+      text-align: center;
+    }
+    .hero h2 { font-size: 2rem; background: rgba(0,0,0,0.6); padding: .8rem 1rem; border-radius: 10px; }
 
-  /* ========== MAIN CONTENT ========== */
-  main { max-width: 1000px; margin: auto; padding: 3rem; }
-  section { margin-bottom: 3rem; }
-  h2 { color: #00cc66; margin-bottom: 1rem; border-left: 5px solid silver; padding-left: 10px; font-size: 2rem; }
-  p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    /* ========== MAIN CONTENT ========== */
+    main { max-width: 1000px; margin: auto; padding: 3rem; }
+    section { margin-bottom: 3rem; }
+    h2 {
+      color: #00cc66;
+      margin-bottom: 1rem;
+      border-left: 5px solid silver;
+      padding-left: 10px;
+      font-size: 2rem;
+    }
+    p { font-size: 1.1rem; margin-bottom: 1.5rem; color: #d0d6d6; }
 
-  /* ========== IMAGES ========== */
-  .images { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-  .images img { width: 80%; max-width: 500px; margin: 0 auto; display: block; border-radius: 10px; border: 3px solid #c0c0c0; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: transform 0.3s ease; }
-  .images img:hover { transform: scale(1.05); }
+    /* ========== IMAGES ========== */
+    .images { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+    .images img {
+      width: 80%; max-width: 500px; display: block;
+      border-radius: 10px; border: 3px solid #c0c0c0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: transform .3s ease;
+    }
+    .images img:hover { transform: scale(1.03); }
 
-  /* ========== FOOTER ========== */
-  footer { background: #0a0a0a; text-align: center; padding: 1.5rem; border-top: 4px solid #00ff88; color: #c0c0c0; }
-  footer p { font-size: 0.9rem; }
-</style>
+    /* ========== QUUIDDITCH TIMELINE ========== */
+    .timeline { position: relative; margin-top: 2rem; padding-left: 2rem; border-left: 4px solid #00cc66; }
+    .timeline-item { margin-bottom: 2rem; position: relative; }
+    .timeline-item::before {
+      content: "⚡";
+      position: absolute;
+      left: -1.7rem;
+      top: 0;
+      font-size: 1.2rem;
+      color: #00ff88;
+      text-shadow: 0 0 6px #00ff88;
+    }
+    .timeline-item h3 { color: #00ff88; margin-bottom: .3rem; font-size: 1.2rem; }
+    .timeline-item p { color: #c0c0c0; font-size: 1rem; }
+
+    /* ========== FOOTER ========== */
+    footer { background: #0a0a0a; text-align: center; padding: 1.5rem; border-top: 4px solid #00ff88; color: #c0c0c0; }
+    footer p { font-size: 0.9rem; }
+
+    /* small screens */
+    @media (max-width:600px) {
+      header h1 { font-size: 2rem; }
+      .hero h2 { font-size: 1.4rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <img src="https://tse2.mm.bing.net/th/id/OIP.63SkWhZ5KRnXgNhAatnIxQHaHk?cb=12&pid=Api" alt="Slytherin Crest Logo" />
-  <h1>Slytherin Supreme</h1>
-  <p>The pride of the Black Lake, destined for eternal victory.</p>
-</header>
+  <header>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.63SkWhZ5KRnXgNhAatnIxQHaHk?cb=12&pid=Api" alt="Slytherin Crest Logo" />
+    <h1>Slytherin Supreme</h1>
+    <p>The pride of the Black Lake, destined for eternal victory.</p>
+  </header>
 
-<div class="hero">
-  <h2>"Ambition, Cunning, Victory – Slytherin Always Prevails"</h2>
-</div>
+  <div class="hero">
+    <h2>"Ambition, Cunning, Victory – Slytherin Always Prevails"</h2>
+  </div>
 
-<main>
-  <section>
-    <h2 class="slither">
-      <span>T</span><span>h</span><span>e</span> 
-      <span>G</span><span>l</span><span>o</span><span>r</span><span>y</span>
-    </h2>
-    <p>Slytherins are not just students – they are visionaries, leaders, and champions. Our cunning ambition and relentless drive have carved the path to greatness. With silver as our armor and green as our flame, we rise above all.</p>
-    <div class="images">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.63SkWhZ5KRnXgNhAatnIxQHaHk?cb=12&pid=Api" alt="Slytherin Crest" />
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>The Glory of Slytherin</h2>
+      <p>Slytherins are not just students – they are visionaries, leaders, and champions. Our cunning ambition and relentless drive have carved the path to greatness. With silver as our armor and green as our flame, we rise above all.</p>
+      <div class="images">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.63SkWhZ5KRnXgNhAatnIxQHaHk?cb=12&pid=Api" alt="Slytherin Crest" />
+      </div>
+    </section>
 
-  <section>
-    <h2 class="slither">
-      <span>I</span><span>d</span><span>e</span><span>n</span><span>t</span><span>i</span><span>t</span><span>y</span>
-    </h2>
-    <p>Our identity is forged in the green and silver. The serpent is our symbol — sleek, dangerous, unyielding. Those who underestimate us soon learn we strike with precision and strategy.</p>
-  </section>
+    <section>
+      <h2>Unbreakable House Identity</h2>
+      <p>Our identity is forged in the green and silver. The serpent is our symbol — sleek, dangerous, unyielding. Those who underestimate us soon learn we strike with precision and strategy.</p>
+    </section>
 
-  <section>
-    <h2 class="slither">
-      <span>Q</span><span>u</span><span>i</span><span>d</span><span>d</span><span>i</span><span>t</span><span>c</span><span>h</span>
-    </h2>
-    <p>Slytherin’s Quidditch team is a force of nature – fast, ruthless, and unstoppable. Year after year, the Quidditch Cup finds its rightful place in the hands of true champions. Victory is not luck; it is the Slytherin way.</p>
-    <div class="images">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.82piyqMkkxtz04WBqGxyGgHaEK?cb=12&pid=Api" alt="Slytherin-themed art" />
-    </div>
-  </section>
-</main>
+    <section>
+      <h2>Quidditch Cup Domination</h2>
+      <p>Slytherin’s Quidditch team is a force of nature – fast, ruthless, and unstoppable. Year after year, the Quidditch Cup finds its rightful place in the hands of true champions. Victory is not luck; it is the Slytherin way.</p>
+      <div class="images">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.82piyqMkkxtz04WBqGxyGgHaEK?cb=12&pid=Api" alt="Slytherin-themed art" />
+      </div>
+    </section>
 
-<footer>
-  <p>⚡ Slytherin Forever | Victory Is Ours ⚡</p>
-</footer>
+    <!-- Quidditch Glory -->
+    <section>
+      <h2>🏆 Quidditch Glory</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>1992</h3>
+          <p>Marcus Flint leads the Slytherin team to a decisive victory over Gryffindor.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>1994</h3>
+          <p>Slytherin dominates the pitch, proving their unmatched skill and strategy.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>1996</h3>
+          <p>Montague captains during the height of house rivalries, showing Slytherin resilience.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Today</h3>
+          <p>Slytherin remains the supreme powerhouse of Quidditch, feared and respected by all.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>⚡ Slytherin Forever | Victory Is Ours ⚡</p>
+  </footer>
+
+  <!-- Auto-wrap every H2's characters in spans and start slither animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all H2s you want animated.
+      // If you want to exclude certain H2s, give them class="no-slither" and filter here.
+      const headings = Array.from(document.querySelectorAll('h2')).filter(h => !h.classList.contains('no-slither'));
+      headings.forEach(h2 => {
+        // avoid double-wrapping (in case script runs twice)
+        if (h2.dataset.slitherApplied) return;
+        const text = h2.textContent;
+        h2.textContent = '';                 // clear original text
+        h2.classList.add('slither');         // add class used by CSS
+        // create spans per character
+        [...text].forEach((char, i) => {
+          const span = document.createElement('span');
+          // preserve spaces visually
+          span.textContent = char === ' ' ? '\u00A0' : char;
+          span.style.animationDelay = (i * 0.08) + 's';
+          h2.appendChild(span);
+        });
+        h2.dataset.slitherApplied = "1";
+      });
+    });
+  </script>
 </body>
 </html>
